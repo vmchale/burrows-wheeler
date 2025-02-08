@@ -15,6 +15,6 @@ bw_d =: dyad define
     N=.#L
     I=:y
     T=:(/:~L) pi L
-    Ti=:{{ I{ T{ ^:y L }}
+    Ti=.{{ I{ T{ ^:y L }}
     |. (Ti"0 i.N)
 )
