@@ -15,7 +15,8 @@ bw_d =: dyad define
     N=.#L
     I=.y
     T=.(/:~L) pi L
-    NB. instead of filling, discard...? and T&{ monad every time hm
+    NB. alternate (less efficient?) version
+    NB. ix=. (I&{)"1 (1 |. {/\(T"0 (i.N)))
     ix=. (I&{) F:. { (T"0 i.(N+1))
     2 |. |. ix { L
 )
