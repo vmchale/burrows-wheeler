@@ -13,7 +13,7 @@ pi=: #@[ ({. i.&(,.oc) }.) [ i.,
 bw_d =: dyad define
     L=.x
     N=.#L
-    I=:y
+    I=.y
     T=.(/:~L) pi L
     NB. instead of filling, discard...? and T&{ monad every time hm
     ix=. (I&{) F:. { (T"0 i.(N+1))
