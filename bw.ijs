@@ -15,13 +15,7 @@ bw_d =: dyad define
     N=.#L
     I=.y
     T=.(/:~L) pi L
-    NB. alternate (less efficient) versions
-    NB. scan over table, extract
-    NB. ix=. (I&{)"1 (1 |. {/\(T"0 (i.N)))
-    NB. fill table, fold/extract
-    NB. ix=. (I&{) F:. { (T"0 i.(N+1))
-    NB. N-fold permutation multiplication, extracting at each step.
-    NB. ix=. T (I&{) F:. (] T&{) (i.N)
+    NB. https://groups.google.com/a/jsoftware.com/g/forum/c/sQYAE0VzaOE/m/Ae2pj0bfAAAJ
     C=.,>C.T
     rot=.(C i. (I{T))+1
     ix=.rot|.C
