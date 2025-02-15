@@ -17,6 +17,7 @@ bw_d =: dyad define
     T=.(/:~L) pi L
     NB. alternate (less efficient?) version
     NB. ix=. (I&{)"1 (1 |. {/\(T"0 (i.N)))
-    ix=. (I&{) F:. { (T"0 i.(N+1))
+    NB. ix=. (I&{) F:. { (T"0 i.(N+1))
+    ix=. T (I&{) F:. (] T&{) (i.N)
     2 |. |. ix { L
 )
